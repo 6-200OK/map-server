@@ -7,5 +7,5 @@
 out
 gen
 
-/public/poets/other/
+/public/poets/other/*.js
 node_modules/
