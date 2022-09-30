@@ -1,4 +1,4 @@
-const Poet = require('../model/poet')
+const Poet = require('../model/db-model/poet')
 const {addPoets} = require('../controller/poet')
 
 let {Traces} = require('../public/poets/libai')
@@ -19,6 +19,8 @@ markers.forEach(marker =>{
 })
 
 // console.log(markers)
-
+/**
+ * 数据入库
+ */
 addPoets(markers).then(r => console.log(r))
 

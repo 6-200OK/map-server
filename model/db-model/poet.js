@@ -1,5 +1,5 @@
 const sequelize = require('sequelize')
-const db = require('../config/db')
+const db = require('../../config/db')
 
 const { INTEGER,STRING,DOUBLE,BOOLEAN} = sequelize
 //定义一个 poet model
