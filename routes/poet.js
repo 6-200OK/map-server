@@ -1,7 +1,8 @@
 var express = require('express')
 var router = express.Router()
 const response = require('../model/response-format/index')
-const {getPoetCoors} = require('../controller/poet')
+const {getPoetCoors,getPoetCoors1,getPoetCoorsList} = require('../controller/poet')
+const {getPoetIntroduction} = require('../controller/poetIntroduction')
 
 
 /**
@@ -21,6 +22,15 @@ const {getPoetCoors} = require('../controller/poet')
 })*/
 router.get('/getPoetCoors',getPoetCoors)
 
-router.get('/getPoetCoors1',getPoetCoors)
+router.get('/getPoetCoors1',getPoetCoors1)
+/**
+ * 分页查询
+ */
+router.get('/getPoetCoorsList',getPoetCoorsList)
+
+/**
+ * 获取诗人introduction
+ */
+router.get('/getPoetIntroduction',getPoetIntroduction)
 
 module.exports = router;

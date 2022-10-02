@@ -37,6 +37,19 @@ module.exports = {
         }).then((coors) => res.status(200).send(coors))
             .catch((error) => res.status(400).send(error))
     },
+    //分页查询
+    getPoetCoorsList(req,res){
+        const {poetName,page = 1,pageSize = 10} = req.query
+        return Poet.findAndCountAll({
+            attributes:['poet','Latitude','Longitude','Title','year'],
+            where:{
+                poet:poetName
+            },
+            offset: (page-1)*pageSize,
+            limit:pageSize
+        }).then((coors) => res.status(200).send(coors))
+            .catch((error) => res.status(400).send(error))
+    },
 
     async getPoetCoors1(req,res) {
         try {
