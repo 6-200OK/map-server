@@ -33,7 +33,8 @@ module.exports = {
             attributes:['poet','Latitude','Longitude','Title','year'],
             where:{
                 poet:poetName
-            }
+            },
+            order:['year']
         }).then((coors) => res.status(200).send(coors))
             .catch((error) => res.status(400).send(error))
     },
@@ -45,6 +46,7 @@ module.exports = {
             where:{
                 poet:poetName
             },
+            order:['year'],
             offset: (page-1)*pageSize,
             limit:pageSize
         }).then((coors) => res.status(200).send(coors))
@@ -58,7 +60,8 @@ module.exports = {
                 attributes:['poet','Latitude','Longitude','Title','year'],
                 where:{
                     poet:poetName
-                }
+                },
+                order:['year']
             })
             return res.status(200).send(coors);
         }catch (e) {

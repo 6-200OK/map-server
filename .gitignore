@@ -7,5 +7,5 @@
 out
 gen
 
-/public/poets/other/*.js
+/public/poets/other/dufu.js
 node_modules/
