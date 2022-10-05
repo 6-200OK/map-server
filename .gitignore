@@ -7,5 +7,9 @@
 out
 gen
 
-/public/poets/other/dufu.js
+/public/poets/other/*.js
 node_modules/
+
+/controller/test-todo.js
+/model/db-model/test-todo.js
+/routes/test-todo.js

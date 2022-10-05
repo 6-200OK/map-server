@@ -22,7 +22,10 @@ const Poet = db.define(
         OffsetTop:DOUBLE,
         Invisible:BOOLEAN,
         RegionId:STRING(48),
-        Title:STRING(48)
+        Title:STRING(48),
+        year:STRING(48),
+        start:STRING(48),
+        end:STRING(48)
     }
 )
 

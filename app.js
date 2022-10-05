@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var poetRouter = require('./routes/poet');
+var todoRouter = require('./routes/test-todo')
+
 
 var cors = require('cors')
 var app = express();
@@ -25,7 +27,8 @@ app.use(cors())
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/poet',poetRouter)
+app.use('/poet',poetRouter);
+app.use('/todo',todoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

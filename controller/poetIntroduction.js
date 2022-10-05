@@ -1,7 +1,7 @@
 const PoetIntroduction = require('../model/db-model/poetIntroduction')
 
 module.exports = {
-    //添加数据
+    //单条添加数据
    addPoetIntroduction(poetIntroduction){
       return PoetIntroduction.create(poetIntroduction).then(result => console.log(result) )
                .catch(e => console.log(e))
