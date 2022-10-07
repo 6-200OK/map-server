@@ -49,8 +49,8 @@ module.exports = {
 
     /**
      *  失败消息格式化
-     * @param res
-     * @param msg
+     * @param res 响应
+     * @param msg 失败信息
      * @param status 状态标识
      */
     responseFailed(res, msg = 'failed', status) {

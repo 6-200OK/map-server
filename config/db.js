@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-
+// 配置数据库相关信息
 const dbConfig = {
     database: 'poetmap',
     username: 'postgres',

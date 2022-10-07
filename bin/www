@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+// 使用nodejs搭建后台服务器
 var app = require('../app');
 var debug = require('debug')('map-server:server');
 var http = require('http');
@@ -32,7 +32,7 @@ server.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
+// 规范端口号，对异常端口进行监听
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -52,7 +52,7 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
-
+// 监听后端错误，并返回相关信息
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;

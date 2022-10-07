@@ -28,5 +28,5 @@ const Poet = db.define(
         end:STRING(48)
     }
 )
-
+// 导出poet
 module.exports = Poet;
